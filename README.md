@@ -21,7 +21,7 @@
 
 ## 注意事项
 	本项目旨在打造一款智能的Linux kernel编辑器而诞生。
-	如果你想将HarmonyVim用于普通的工程，那么你可以根据需要修改.ycm_extra_conf.py文件。
+	如果你想将KylinVim用于普通的工程，那么你可以根据需要修改.ycm_extra_conf.py文件。
 
 
 ## 安装
@@ -34,9 +34,9 @@
 
 #### 安装
 
-    git clone https://github.com/LinuxTorvaldsRodriguez/HarmonyVim.git ~/.HarmonyVim
+    git clone https://github.com/LinuxTorvaldsRodriguez/KylinVim.git ~/.KylinVim
     或者
-    git clone https://gitee.com/coco-linux/HarmonyVim.git ~/.HarmonyVim
+    git clone https://gitee.com/coco-linux/KylinVim.git ~/.KylinVim
     cd ~/.
     ./install.sh
     
@@ -76,9 +76,9 @@
 
 #### 安装
 
-    git clone https://github.com/LinuxTorvaldsRodriguez/HarmonyVim.git ~/.HarmonyVim
+    git clone https://github.com/LinuxTorvaldsRodriguez/KylinVim.git ~/.KylinVim
     或者
-    git clone https://gitee.com/coco-linux/HarmonyVim.git ~/.HarmonyVim
+    git clone https://gitee.com/coco-linux/KylinVim.git ~/.KylinVim
     cd ~/.
     ./install.sh //不要加sudo
     
@@ -101,9 +101,9 @@
 
 #### 安装
 
-    git clone https://github.com/LinuxTorvaldsRodriguez/HarmonyVim.git ~/.HarmonyVim
+    git clone https://github.com/LinuxTorvaldsRodriguez/KylinVim.git ~/.KylinVim
     或者
-    git clone https://gitee.com/coco-linux/HarmonyVim.git ~/.HarmonyVim
+    git clone https://gitee.com/coco-linux/KylinVim.git ~/.KylinVim
     cd ~/.
     ./install.sh
     
@@ -237,11 +237,11 @@ Windows系统安装Nerd Font字体后并更改xshell字体即可。
 
 ### 安装完成后YCM不能够工作！！！
 
-这里的原因可能就有很多了，可能每个人遇到的问题不一样，但HarmonyVim尽最大努力不让用户操心，需要注意的是ycm插件只支持64位的系统，更多信息请访问YCM官网。
+这里的原因可能就有很多了，可能每个人遇到的问题不一样，但KylinVim尽最大努力不让用户操心，需要注意的是ycm插件只支持64位的系统，更多信息请访问YCM官网。
 
 ### 在aaa用户下安装了，在bbb用户下不能使用？
 
-目前HarmonyVim是基于用户的，如果你想在其他用户下也能使用HarmonyVim，也需要单独安装。
+目前KylinVim是基于用户的，如果你想在其他用户下也能使用KylinVim，也需要单独安装。
 
 ### 在Archlinux环境下不能使用YCM怎么办？(缺少libtinfo.so.5)
 
