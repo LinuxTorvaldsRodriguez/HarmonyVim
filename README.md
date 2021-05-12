@@ -21,7 +21,7 @@
 
 ## 注意事项
 	本项目旨在打造一款智能的Linux kernel编辑器而诞生。
-	如果你想将KylinVim用于普通的工程，那么你可以根据需要修改.ycm_extra_conf.py文件。
+	如果你想将VimKylin用于普通的工程，那么你可以根据需要修改.ycm_extra_conf.py文件。
 
 
 ## 安装
@@ -34,9 +34,9 @@
 
 #### 安装
 
-    git clone https://github.com/LinuxTorvaldsRodriguez/KylinVim.git ~/.KylinVim
+    git clone https://github.com/LinuxTorvaldsRodriguez/VimKylin.git ~/.VimKylin
     或者
-    git clone https://gitee.com/coco-linux/KylinVim.git ~/.KylinVim
+    git clone https://gitee.com/coco-linux/VimKylin.git ~/.VimKylin
     cd ~/.
     ./install.sh
     
@@ -76,9 +76,9 @@
 
 #### 安装
 
-    git clone https://github.com/LinuxTorvaldsRodriguez/KylinVim.git ~/.KylinVim
+    git clone https://github.com/LinuxTorvaldsRodriguez/VimKylin.git ~/.VimKylin
     或者
-    git clone https://gitee.com/coco-linux/KylinVim.git ~/.KylinVim
+    git clone https://gitee.com/coco-linux/VimKylin.git ~/.VimKylin
     cd ~/.
     ./install.sh //不要加sudo
     
@@ -101,9 +101,9 @@
 
 #### 安装
 
-    git clone https://github.com/LinuxTorvaldsRodriguez/KylinVim.git ~/.KylinVim
+    git clone https://github.com/LinuxTorvaldsRodriguez/VimKylin.git ~/.VimKylin
     或者
-    git clone https://gitee.com/coco-linux/KylinVim.git ~/.KylinVim
+    git clone https://gitee.com/coco-linux/VimKylin.git ~/.VimKylin
     cd ~/.
     ./install.sh
     
