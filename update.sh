@@ -12,19 +12,18 @@ function is_exist_file()
 }
 
 # 更新mac平台字体
-function update_fonts_on_mac()
+function update-fonts_on_MacOS()
 {
     rm -rf ~/Library/Fonts/Droid\ Sans\ Mono\ Nerd\ Font\ Complete.otf
     cp ./fonts/Droid\ Sans\ Mono\ Nerd\ Font\ Complete.otf ~/Library/Fonts
 }
 
 # 更新android平台字体
-function update_fonts_on_android()
+function update_fonts_on_Android()
 {
     rm -rf ~/.termux/font.ttf
     mkdir ~/.termux
     cp ./fonts/DejaVu.ttf ~/.termux/font.ttf
-
     # 刷新style
     REL="am broadcast --user 0 -a com.termux.app.reload_style com.termux"
     $REL > /dev/null
@@ -78,63 +77,65 @@ function copy_files()
 }
 
 # 打印logo
-function print_logo()
+function print_VimKylin_logo()
 {
     color="$(tput setaf 6)"
     normal="$(tput sgr0)"
     printf "${color}"
+    echo ''
 	echo ''
-	echo '+=====================================================================================+'
-	echo '+                                                                                     +'
-	echo '+      _    _                                         __      ___                     +'
-	echo '+     | |  | |                                        \ \    / (_)                    +'
-	echo '+     | |__| | __ _ _ __ _ __ ___   ___  _ __  _   _   \ \  / / _ _ __ ___            +'
-	echo '+     |  __  |/ _` | *__| *_ ^ _  */ _ *| *_ *| | | |   \ \/ / | | *_ ^ _  *          +'
-	echo '+     | |  | | (_| | |  | | | | | | (_) | | | | |_| |    \  /  | | | | | | |          +'
-	echo '+     |_|  |_|\__,_|_|  |_| |_| |_|\___/|_| |_|\__, |     \/   |_|_| |_| |_|          +'
-	echo '+                                              ___/ |                                 +'
-	echo '+                                             |____/                                  +'
-	echo '+                                                                                     +'
-	echo '+                                  Just enjoy it!                                     +'
-	echo '+                                author:coco-linux                                    +'
-	echo '+                             email:2673483151@qq.com                                 +'
-	echo '+                          Simple,  fast  and  efficient.                             +'
-	echo '+            Direction determines the road, the road determines the fate.             +'
-	echo '+    wellcome to my github ——https://github.com/LinuxTorvaldsRodriguez/HarmonyVim     +'
-	echo '+=====================================================================================+'
+    echo '+=====================================================================================+'
+    echo '+                                                                                     +'
+    echo '+                       __      ___           _  __     _ _                           +'
+    echo '+                       \ \    / (_)         | |/ /    | (_)                          +'
+    echo '+                        \ \  / / _ _ __ ___ | * /_   _| |_ _ __                      +'
+    echo '+                         \ \/ / | | *_ ` _ \|  <| | | | | | *_ \                     +'
+    echo '+                          \  /  | | | | | | | * \ |_| | | | | | |                    +'
+    echo '+                           \/   |_|_| |_| |_|_|\_\__, |_|_|_| |_|                    +'
+    echo '+                                                  __/ |                              +'
+    echo '+                                                 |___/                               +'
+    echo '+                                                                                     +'
+    echo '+                                  Just enjoy it!                                     +'
+    echo '+                                author:coco-linux                                    +'
+    echo '+                             email:2673483151@qq.com                                 +'
+    echo '+                          Simple,  fast  and  efficient.                             +'
+    echo '+            Direction determines the road, the road determines the fate.             +'
+    echo '+        wellcome to my github ——https://github.com/TorvaldsRodriguez/VimKylin        +'
+    echo '+=====================================================================================+'
 	echo ''
 	echo ''
     printf "${normal}"
 }
 
-# 在mac更新HarmonyVim
-function update_HarmonyVim_on_mac()
+
+# 在mac更新VimKylin
+function update_VimKylin_on_MacOS()
 {
     git pull origin master
     copy_files
-    update_fonts_on_mac
+    update-fonts_on_MacOS
     update_vim_plugin
-    print_logo
+    print_VimKylin_logo
 }
 
-# 在linux更新HarmonyVim
-function update_HarmonyVim_on_linux()
+# 在linux更新VimKylin
+function update_Vimkylin_on_Linux()
 {
     git pull origin master
     copy_files
     update_fonts_on_linux
     update_vim_plugin
-    print_logo
+    print_VimKylin_logo
 }
 
-# 在android更新HarmonyVim
-function update_HarmonyVim_on_android()
+# 在android更新VimKylin
+function update_Vimkylin_on_Android()
 {
     git pull origin master
     copy_files
-    update_fonts_on_android
+    update_fonts_on_Android
     update_vim_plugin
-    print_logo
+    print_VimKylin_logo
 }
 
 # 获取当前时间戳
@@ -153,14 +154,14 @@ function main()
     echo "Platform type: "${type}
 
     if [ ${type} == "Darwin" ]; then
-        update_HarmonyVim_on_mac
+        update_VimKylin_on_MacOS
     elif [ ${type} == "Linux" ]; then
         tp=$(uname -a)
         if [[ $tp =~ "Android" ]]; then
             echo "Android"
-            update_HarmonyVim_on_android
+            update_Vimkylin_on_Android
         else
-            update_HarmonyVim_on_linux
+            update_Vimkylin_on_Linux
         fi
     else
         echo "Not support platform type: "${type}
@@ -174,14 +175,14 @@ function main()
 
 
 # 调用main函数
-echo -n "You will update HarmonyVim(include YouCompleteMe...) without GUI,are you sure[y/n]"
+echo -n "You will update VimKylin(include YouCompleteMe...) without GUI,are you sure[y/n]"
 read  your_option
 if [ ${your_option} == "y" ]; then
-    echo "Install HarmonyVim begining..."
+    echo "Install VimKylin begining..."
     echo "Please wait for a few minutes."
     main
 else
-    echo "Sorry!Stop install HarmonyVim"
+    echo "Sorry!Stop install VimKylin"
 fi
 
 

@@ -12,7 +12,7 @@ function get_current_username_on_linux()
     current_path=$PWD
     array=(${current_path//// })
 
-    if [ ${array[0]} == "root" ]; then 
+    if [ ${array[0]} == "root" ]; then
         echo ${array[0]}
     else
         echo ${array[1]}
@@ -29,13 +29,13 @@ function is_valid_user_on_linux()
     is_found=0
     for username in ${array[@]}
     do
-        if [ $username == $desc_username ]; then 
+        if [ $username == $desc_username ]; then
             is_found=1
             break
         fi
     done
 
-    if [ $desc_username == "root" ]; then 
+    if [ $desc_username == "root" ]; then
         is_found=1
     fi
 
@@ -153,37 +153,38 @@ function backup_vimrc_and_vim()
 }
 
 # 打印logo
-function print_logo()
+function print_vimkylin_logo()
 {
     color="$(tput setaf 6)"
     normal="$(tput sgr0)"
     printf "${color}"
+    echo ''
 	echo ''
-	echo '+=====================================================================================+'
-	echo '+                                                                                     +'
-	echo '+      _    _                                         __      ___                     +'
-	echo '+     | |  | |                                        \ \    / (_)                    +'
-	echo '+     | |__| | __ _ _ __ _ __ ___   ___  _ __  _   _   \ \  / / _ _ __ ___            +'
-	echo '+     |  __  |/ _` | *__| *_ ^ _  */ _ *| *_ *| | | |   \ \/ / | | *_ ^ _  *          +'
-	echo '+     | |  | | (_| | |  | | | | | | (_) | | | | |_| |    \  /  | | | | | | |          +'
-	echo '+     |_|  |_|\__,_|_|  |_| |_| |_|\___/|_| |_|\__, |     \/   |_|_| |_| |_|          +'
-	echo '+                                              ___/ |                                 +'
-	echo '+                                             |____/                                  +'
-	echo '+                                                                                     +'
-	echo '+                                  Just enjoy it!                                     +'
-	echo '+                                author:coco-linux                                    +'
-	echo '+                             email:2673483151@qq.com                                 +'
-	echo '+                          Simple,  fast  and  efficient.                             +'
-	echo '+            Direction determines the road, the road determines the fate.             +'
-	echo '+    wellcome to my github ——https://github.com/LinuxTorvaldsRodriguez/HarmonyVim     +'
-	echo '+=====================================================================================+'
+    echo '+=====================================================================================+'
+    echo '+                                                                                     +'
+    echo '+                       __      ___           _  __     _ _                           +'
+    echo '+                       \ \    / (_)         | |/ /    | (_)                          +'
+    echo '+                        \ \  / / _ _ __ ___ | * /_   _| |_ _ __                      +'
+    echo '+                         \ \/ / | | *_ ` _ \|  <| | | | | | *_ \                     +'
+    echo '+                          \  /  | | | | | | | * \ |_| | | | | | |                    +'
+    echo '+                           \/   |_|_| |_| |_|_|\_\__, |_|_|_| |_|                    +'
+    echo '+                                                  __/ |                              +'
+    echo '+                                                 |___/                               +'
+    echo '+                                                                                     +'
+    echo '+                                  Just enjoy it!                                     +'
+    echo '+                                author:coco-linux                                    +'
+    echo '+                             email:2673483151@qq.com                                 +'
+    echo '+                          Simple,  fast  and  efficient.                             +'
+    echo '+            Direction determines the road, the road determines the fate.             +'
+    echo '+        wellcome to my github ——https://github.com/TorvaldsRodriguez/VimKylin        +'
+    echo '+=====================================================================================+'
 	echo ''
 	echo ''
     printf "${normal}"
 }
 
 # 获得home路径
-function get_home_path() 
+function get_home_path()
 {
     username=$1
     if [ $username == "root" ]; then
@@ -193,7 +194,7 @@ function get_home_path()
     fi
 }
 
-# 在linux上将HarmonyVim安装到指定用户
+# 在linux上将VimKylin安装到指定用户
 function install_to_user_on_linux()
 {
     src_username=`get_current_username_on_linux`
@@ -201,14 +202,14 @@ function install_to_user_on_linux()
 
     # 判断是否是有效用户
     is_found=$(is_valid_user_on_linux $desc_username)
-    if [ $is_found != 1 ]; then 
+    if [ $is_found != 1 ]; then
         echo "Invalid username "$desc_username
         return
     fi
 
     # 判断是否是当前用户
     if [ $src_username == $desc_username ]; then
-        echo "Can not install HarmonyVim to "$desc_username
+        echo "Can not install VimKylin to "$desc_username
         return
     fi
 
@@ -216,7 +217,7 @@ function install_to_user_on_linux()
     desc_home_path=$(get_home_path $desc_username)
 
     echo "Current home path:"$src_home_path
-    echo "Installing HarmonyVim to "$desc_home_path
+    echo "Installing VimKylin to "$desc_home_path
 
     backup_vimrc_and_vim $desc_username $desc_home_path
 
@@ -232,44 +233,44 @@ function install_to_user_on_linux()
 
     chown -R $desc_username":"$desc_username $desc_vim_path
 
-    # 拷贝.HarmonyVim目录
-    src_HarmonyVim_path=$src_home_path".HarmonyVim/"
-    desc_HarmonyVim_path=$desc_home_path".HarmonyVim/"
+    # 拷贝.VimKylin目录
+    src_VimKylin_path=$src_home_path".VimKylin/"
+    desc_VimKylin_path=$desc_home_path".VimKylin/"
 
-    rm -rf $desc_HarmonyVim_path
-    cp -R $src_HarmonyVim_path $desc_home_path
-    chown -R $desc_username":"$desc_username $desc_HarmonyVim_path
+    rm -rf $desc_VimKylin_path
+    cp -R $src_VimKylin_path $desc_home_path
+    chown -R $desc_username":"$desc_username $desc_VimKylin_path
 
     rm -rf $desc_home_path".vimrc.custom.plugins"
-    cp $desc_HarmonyVim_path".vimrc.custom.plugins" $desc_home_path
+    cp $desc_VimKylin_path".vimrc.custom.plugins" $desc_home_path
     chown $desc_username":"$desc_username $desc_home_path".vimrc.custom.plugins"
 
     rm -rf $desc_home_path".vimrc.custom.config"
-    cp $desc_HarmonyVim_path".vimrc.custom.config" $desc_home_path
+    cp $desc_VimKylin_path".vimrc.custom.config" $desc_home_path
     chown $desc_username":"$desc_username $desc_home_path".vimrc.custom.config"
 
     # 创建软链接
     rm -rf $desc_home_path".vimrc"
-    ln -s $desc_HarmonyVim_path".vimrc" $desc_home_path
+    ln -s $desc_VimKylin_path".vimrc" $desc_home_path
     chown -R $desc_username":"$desc_username $desc_home_path".vimrc"
 
     rm -rf $desc_home_path".ycm_extra_conf.py"
-    ln -s $desc_HarmonyVim_path".ycm_extra_conf.py" $desc_home_path
+    ln -s $desc_VimKylin_path".ycm_extra_conf.py" $desc_home_path
     chown -R $desc_username":"$desc_username $desc_home_path".ycm_extra_conf.py"
 
-    ln -s $desc_HarmonyVim_path"colors" $desc_vim_path
+    ln -s $desc_VimKylin_path"colors" $desc_vim_path
     chown -R $desc_username":"$desc_username $desc_vim_path"colors"
 
-    ln -s $desc_HarmonyVim_path"ftplugin" $desc_vim_path
+    ln -s $desc_VimKylin_path"ftplugin" $desc_vim_path
     chown -R $desc_username":"$desc_username $desc_vim_path"ftplugin"
 
-    ln -s $desc_HarmonyVim_path"autoload" $desc_vim_path
+    ln -s $desc_VimKylin_path"autoload" $desc_vim_path
     chown -R $desc_username":"$desc_username $desc_vim_path"autoload"
 
     # 安装字体
     mkdir -p $desc_home_path".local/share/fonts/"
     rm -rf $desc_home_path".local/share/fonts/Droid Sans Mono Nerd Font Complete.otf"
-    cp $desc_HarmonyVim_path"fonts/Droid Sans Mono Nerd Font Complete.otf" $desc_home_path".local/share/fonts/"
+    cp $desc_VimKylin_path"fonts/Droid Sans Mono Nerd Font Complete.otf" $desc_home_path".local/share/fonts/"
     chown -R $desc_username":"$desc_username $desc_home_path".local/"
     fc-cache -vf $desc_home_path".local/share/fonts/"
 }
@@ -289,7 +290,7 @@ if [ ${type} == "Linux" ]; then
         install_to_user_on_linux $username
     done
 
-    print_logo
+    print_vimkylin_logo
 else
     echo "Sorry,not support platform type: "${type}
 fi

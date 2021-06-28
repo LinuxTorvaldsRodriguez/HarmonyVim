@@ -6,7 +6,7 @@
 	也考虑到了有些系统的Vim(版本比较旧)不支持Python的新特性，它会自动去GitHub上下载Vim源码并将Python的相关支持编译进去。
 	也会安装nerd-font字体来避免Vim显示出现乱码。不仅实现了YCM自动编译安装，给折腾了N天YCM都没有安装好的用户带来了希望，
 	而且也支持macOS和linux众多发行版本，让Linux爱好者频繁切换发行版而不用操心Vim环境配置。
-	
+
 ## HomeBrew的新特性
 	以下仅列举主要的新特性，还有很多新特性需要您自己去摸索。O(∩_∩)O哈哈~
 	1.实现了一键编译C/C++源代码;
@@ -29,17 +29,17 @@
 ### MacOS X
 
 #### 安装HomeBrew
- 
+
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 #### 安装
 
-    git clone https://github.com/LinuxTorvaldsRodriguez/VimKylin.git ~/.VimKylin
+    git clone https://github.com/TorvaldsRodriguez/VimKylin.git ~/.VimKylin
     或者
     git clone https://gitee.com/coco-linux/VimKylin.git ~/.VimKylin
     cd ~/.
     ./install.sh
-    
+
 #### 设置字体
 
 	为防止显示乱码，需设置macOS终端字体为`Droid Sans Mono Nerd Font`。
@@ -48,7 +48,7 @@
 
 	紧跟的步伐，尝试新版本带来的新特性
     ./update.sh
-    
+
 ### Linux 64-bit
 
 #### 支持以下发行版
@@ -76,12 +76,12 @@
 
 #### 安装
 
-    git clone https://github.com/LinuxTorvaldsRodriguez/VimKylin.git ~/.VimKylin
+    git clone https://github.com/TorvaldsRodriguez/VimKylin.git ~/.VimKylin
     或者
     git clone https://gitee.com/coco-linux/VimKylin.git ~/.VimKylin
     cd ~/.
     ./install.sh //不要加sudo
-    
+
 #### 设置字体
 
 	为防止显示乱码，需设置linux终端字体为`Droid Sans Mono Nerd Font`。
@@ -90,8 +90,8 @@
 
 	将在某个用户下安装好后，若需要在其他用户也能够使用，则执行如下命令:
 	//username1 username2应替换为真实的用户名
-    sudo ./install_to_user.sh username1 username2 
-    
+    sudo ./install_to_user.sh username1 username2
+
 #### 更新
 
 	紧跟的步伐，尝试新版本带来的新特性
@@ -101,12 +101,12 @@
 
 #### 安装
 
-    git clone https://github.com/LinuxTorvaldsRodriguez/VimKylin.git ~/.VimKylin
+    git clone https://github.com/TorvaldsRodriguez/VimKylin.git ~/.VimKylin
     或者
     git clone https://gitee.com/coco-linux/VimKylin.git ~/.VimKylin
     cd ~/.
     ./install.sh
-    
+
 #### 更新
 
 	紧跟的步伐，尝试新版本带来的新特性
@@ -250,4 +250,4 @@ Windows系统安装Nerd Font字体后并更改xshell字体即可。
 ### 以上没有我遇到的问题怎么办？
 
 您可以通过上网找解决方法，或提Issues，也可以通过发邮件方式2673483151@qq.com一起讨论解决方法。期待大家发现问题，并把解决方法贴出来。O(∩_∩)O哈哈~
-	
+

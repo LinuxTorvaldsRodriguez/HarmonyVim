@@ -1,22 +1,21 @@
-"
-"+=====================================================================================+
-"+                                                                                     +
-"+      _    _                                         __      ___                     +
-"+     | |  | |                                        \ \    / (_)                    +
-"+     | |__| | __ _ _ __ _ __ ___   ___  _ __  _   _   \ \  / / _ _ __ ___            +
-"+     |  __  |/ _` | *__| *_ ^ _  */ _ *| *_ *| | | |   \ \/ / | | *_ ^ _  *          +
-"+     | |  | | (_| | |  | | | | | | (_) | | | | |_| |    \  /  | | | | | | |          +
-"+     |_|  |_|\__,_|_|  |_| |_| |_|\___/|_| |_|\__, |     \/   |_|_| |_| |_|          +
-"+                                              ___/ |                                 +
-"+                                             |____/                                  +
-"+                                                                                     +
-"+                                  Just enjoy it!                                     +
-"+                                author:coco-linux                                    +
-"+                             email:2673483151@qq.com                                 +
-"+                          Simple,  fast  and  efficient.                             +
-"+            Direction determines the road, the road determines the fate.             +
-"+    wellcome to my github ——https://github.com/LinuxTorvaldsRodriguez/HarmonyVim     +
-"+=====================================================================================+
+"+=====================================================================================+'
+"+                                                                                     +'
+"+                       __      ___           _  __     _ _                           +'
+"+                       \ \    / (_)         | |/ /    | (_)                          +'
+"+                        \ \  / / _ _ __ ___ | * /_   _| |_ _ __                      +'
+"+                         \ \/ / | | `_ ` _ \|  <| | | | | | `_ \                     +'
+"+                          \  /  | | | | | | | * \ |_| | | | | | |                    +'
+"+                           \/   |_|_| |_| |_|_|\_\__, |_|_|_| |_|                    +'
+"+                                                  __/ |                              +'
+"+                                                 |___/                               +'
+"+                                                                                     +'
+"+                                  Just enjoy it!                                     +'
+"+                                author:coco-linux                                    +'
+"+                             email:2673483151@qq.com                                 +'
+"+                          Simple,  fast  and  efficient.                             +'
+"+            Direction determines the road, the road determines the fate.             +'
+"+    wellcome to my github ——https://github.com/TorvaldsRodriguez/VimKylin            +'
+"+=====================================================================================+'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -117,10 +116,10 @@ if has("gui_running")
     let system = system('uname -s')
     if system == "Darwin\n"
         " 设置字体
-        set guifont=Droid\ Sans\ Mono\ Nerd\ Font\ Complete:h18
+        set guifont=Droid\ Sans\ Mono\ Nerd\ Font\ Complete:h11
     else
         " 设置字体
-        set guifont=DroidSansMono\ Nerd\ Font\ Regular\ 18
+        set guifont=DroidSansMono\ Nerd\ Font\ Regular\ 11
     endif
     set guioptions-=m           " 隐藏菜单栏
     set guioptions-=T           " 隐藏工具栏
@@ -150,6 +149,7 @@ command! -nargs=1 -bar UnPlug call s:deregister(<args>)
 " set rtp+=~/.vim/plugged
 call plug#begin('~/.vim/plugged')
 
+Plug 'wesleyche/SrcExpl'
 Plug 'chxuan/cpp-mode'
 Plug 'chxuan/vim-edit'
 Plug 'chxuan/change-colorscheme'
@@ -294,9 +294,9 @@ nnoremap <leader><leader>p "+p
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif
 
 " 主题设置
-set background=dark
+" set background=dark
 let g:onedark_termcolors=256
-colorscheme gruvbox
+" colorscheme gruvbox
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -406,8 +406,8 @@ let g:nerdtree_tabs_open_on_console_startup=1
 "在目录树窗口中显示隐藏文件
 let NERDTreeShowHidden=1
 "如果在打开一个文件时顺便打开目录树，可以添加一下这行
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -428,8 +428,8 @@ let g:ycm_confirm_extra_conf = 0
 let g:ycm_show_diagnostics_ui = 0
 let g:ycm_server_log_level = 'info'
 let g:ycm_collect_identifiers_from_comments_and_strings = 1 " 收集
-let g:ycm_min_num_identifier_candidate_chars = 2  " 两个字符触发补全
-let g:ycm_max_num_candidates = 35  " 候选数量
+let g:ycm_min_num_identifier_candidate_chars = 2            " 两个字符触发补全
+let g:ycm_max_num_candidates = 35                           " 候选数量
 let g:ycm_error_symbol = '✗'
 let g:ycm_warning_symbol = '✹'
 let g:ycm_seed_identifiers_with_syntax = 1

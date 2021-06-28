@@ -138,7 +138,6 @@ function get_ubuntu_version()
     line=$(cat /etc/lsb-release | grep "DISTRIB_RELEASE")
     arr=(${line//=/ })
     version=(${arr[1]//./ })
-
     echo ${version[0]}
 }
 
@@ -471,33 +470,32 @@ function print_logo()
     printf "${color}"
     echo ''
 	echo ''
-    echo ''
-	echo '+=====================================================================================+'
-	echo '+                                                                                     +'
-	echo '+      _    _                                         __      ___                     +'
-	echo '+     | |  | |                                        \ \    / (_)                    +'
-	echo '+     | |__| | __ _ _ __ _ __ ___   ___  _ __  _   _   \ \  / / _ _ __ ___            +'
-	echo '+     |  __  |/ _` | *__| *_ ^ _  */ _ *| *_ *| | | |   \ \/ / | | *_ ^ _  *          +'
-	echo '+     | |  | | (_| | |  | | | | | | (_) | | | | |_| |    \  /  | | | | | | |          +'
-	echo '+     |_|  |_|\__,_|_|  |_| |_| |_|\___/|_| |_|\__, |     \/   |_|_| |_| |_|          +'
-	echo '+                                              ___/ |                                 +'
-	echo '+                                             |____/                                  +'
-	echo '+                                                                                     +'
-	echo '+                                  Just enjoy it!                                     +'
-	echo '+                                author:coco-linux                                    +'
-	echo '+                             email:2673483151@qq.com                                 +'
-	echo '+                          Simple,  fast  and  efficient.                             +'
-	echo '+            Direction determines the road, the road determines the fate.             +'
-	echo '+    wellcome to my github ——https://github.com/LinuxTorvaldsRodriguez/HarmonyVim     +'
-	echo '+=====================================================================================+'
+    echo '+=====================================================================================+'
+    echo '+                                                                                     +'
+    echo '+                       __      ___           _  __     _ _                           +'
+    echo '+                       \ \    / (_)         | |/ /    | (_)                          +'
+    echo '+                        \ \  / / _ _ __ ___ | * /_   _| |_ _ __                      +'
+    echo '+                         \ \/ / | | *_ ` _ \|  <| | | | | | *_ \                     +'
+    echo '+                          \  /  | | | | | | | * \ |_| | | | | | |                    +'
+    echo '+                           \/   |_|_| |_| |_|_|\_\__, |_|_|_| |_|                    +'
+    echo '+                                                  __/ |                              +'
+    echo '+                                                 |___/                               +'
+    echo '+                                                                                     +'
+    echo '+                                  Just enjoy it!                                     +'
+    echo '+                                author:coco-linux                                    +'
+    echo '+                             email:2673483151@qq.com                                 +'
+    echo '+                          Simple,  fast  and  efficient.                             +'
+    echo '+            Direction determines the road, the road determines the fate.             +'
+    echo '+        wellcome to my github ——https://github.com/TorvaldsRodriguez/VimKylin        +'
+    echo '+=====================================================================================+'
 	echo ''
 	echo ''
     printf "${normal}"
 }
 
 
-# 在mac平台安装HarmonyVim
-function install_HarmonyVim_on_mac()
+# 在mac平台安装VimKylin
+function install_VimKylin_on_MacOS()
 {
     backup_vimrc_and_vim
     install_prepare_software_on_mac
@@ -509,8 +507,8 @@ function install_HarmonyVim_on_mac()
 }
 
 
-# 在android平台安装HarmonyVim
-function install_HarmonyVim_on_android()
+# 在android平台安装VimKylin
+function install_VimKylin_on_Android()
 {
     backup_vimrc_and_vim
     install_prepare_software_on_android
@@ -522,8 +520,8 @@ function install_HarmonyVim_on_android()
 }
 
 
-# 开始安装HarmonyVim
-function begin_install_HarmonyVim()
+# 开始安装VimKylin
+function begin_install_VimKylin()
 {
     copy_files
     install_fonts_on_linux
@@ -533,109 +531,109 @@ function begin_install_HarmonyVim()
 }
 
 
-# 在ubuntu上安装HarmonyVim
-function install_HarmonyVim_on_ubuntu()
+# 在ubuntu上安装VimKylin
+function install_VimKylin_on_ubuntu()
 {
     backup_vimrc_and_vim
     install_prepare_software_on_ubuntu
-    begin_install_HarmonyVim
+    begin_install_VimKylin
 }
 
 
-# 在ubuntu系上安装HarmonyVim
-function install_HarmonyVim_on_ubuntu_like()
+# 在ubuntu系上安装VimKylin
+function install_VimKylin_on_ubuntu_like()
 {
     backup_vimrc_and_vim
     install_prepare_software_on_ubuntu_like
-    begin_install_HarmonyVim
+    begin_install_VimKylin
 }
 
 
-# 在debian上安装HarmonyVim
-function install_HarmonyVim_on_debian()
+# 在debian上安装VimKylin
+function install_VimKylin_on_debian()
 {
     backup_vimrc_and_vim
     install_prepare_software_on_debian
-    begin_install_HarmonyVim
+    begin_install_VimKylin
 }
 
 
-# 在centos上安装HarmonyVim
-function install_HarmonyVim_on_centos()
+# 在centos上安装VimKylin
+function install_VimKylin_on_centos()
 {
     backup_vimrc_and_vim
     install_prepare_software_on_centos
-    begin_install_HarmonyVim
+    begin_install_VimKylin
 }
 
 
-# 在fedora上安装HarmonyVim
-function install_HarmonyVim_on_fedora()
+# 在fedora上安装VimKylin
+function install_VimKylin_on_fedora()
 {
     backup_vimrc_and_vim
     install_prepare_software_on_fedora
-    begin_install_HarmonyVim
+    begin_install_VimKylin
 }
 
-# 在archlinux上安装HarmonyVim
-function install_HarmonyVim_on_archlinux()
+# 在archlinux上安装VimKylin
+function install_VimKylin_on_archlinux()
 {
     backup_vimrc_and_vim
     install_prepare_software_on_archlinux
-    begin_install_HarmonyVim
+    begin_install_VimKylin
 }
 
 
-# 在Gentoo上安装HarmonyVim
-function install_HarmonyVim_on_gentoo()
+# 在Gentoo上安装VimKylin
+function install_VimKylin_on_gentoo()
 {
     backup_vimrc_and_vim
     install_prepare_software_on_gentoo
-    begin_install_HarmonyVim
+    begin_install_VimKylin
 }
 
 
-# 在opensuse上安装HarmonyVim
-function install_HarmonyVim_on_opensuse()
+# 在opensuse上安装VimKylin
+function install_VimKylin_on_OpenSUSE()
 {
     backup_vimrc_and_vim
     install_prepare_software_on_opensuse
-    begin_install_HarmonyVim
+    begin_install_VimKylin
 }
 
 
-# 在linux平上台安装HarmonyVim
-function install_HarmonyVim_on_linux()
+# 在linux平上台安装VimKylin
+function install_VimKylin_on_linux()
 {
     distro=`get_linux_distro`
     echo "Linux distro: "${distro}
 
     if [ ${distro} == "Ubuntu" ]; then
-        install_HarmonyVim_on_ubuntu
+        install_VimKylin_on_ubuntu
     elif [ ${distro} == "Deepin" ]; then
-        install_HarmonyVim_on_ubuntu_like
+        install_VimKylin_on_ubuntu_like
     elif [ ${distro} == "LinuxMint" ]; then
-        install_HarmonyVim_on_ubuntu_like
+        install_VimKylin_on_ubuntu_like
     elif [ ${distro} == "elementaryOS" ]; then
-        install_HarmonyVim_on_ubuntu_like
+        install_VimKylin_on_ubuntu_like
     elif [ ${distro} == "Debian" ]; then
-        install_HarmonyVim_on_debian
+        install_VimKylin_on_debian
     elif [ ${distro} == "UOS" ]; then
-        install_HarmonyVim_on_debian
+        install_VimKylin_on_debian
     elif [ ${distro} == "Kali" ]; then
-        install_HarmonyVim_on_debian
+        install_VimKylin_on_debian
     elif [ ${distro} == "CentOS" ]; then
-        install_HarmonyVim_on_centos
+        install_VimKylin_on_centos
     elif [ ${distro} == "fedora" ]; then
-        install_HarmonyVim_on_fedora
+        install_VimKylin_on_fedora
     elif [ ${distro} == "openSUSE" ]; then
-        install_HarmonyVim_on_opensuse
+        install_VimKylin_on_OpenSUSE
     elif [ ${distro} == "ArchLinux" ]; then
-        install_HarmonyVim_on_archlinux
+        install_VimKylin_on_archlinux
     elif [ ${distro} == "ManjaroLinux" ]; then
-        install_HarmonyVim_on_archlinux
+        install_VimKylin_on_archlinux
     elif [ ${distro} == "Gentoo" ]; then
-        install_HarmonyVim_on_gentoo
+        install_VimKylin_on_gentoo
     else
         echo "Not support linux distro: "${distro}
     fi
@@ -680,7 +678,7 @@ function configuring_complex_environments()
 	echo "make tags cscope TAGS"
 	echo "Please wait for a few minutes."
 	make tags cscope TAGS
-	cd ${HOME}/.HarmonyVim
+	cd ${HOME}/.VimKylin
 	echo "The current directory path is:${PWD}"
 }
 
@@ -726,30 +724,30 @@ function configuring_general_environment()
 }
 
 
-# main函数
-function main()
+# VimKylinMain函数
+function VimKylinMain()
 {
     begin=`get_now_timestamp`
 	# configuring_general_environment
-	echo "Commence installation of HarmonyVim."
+	echo "Commence installation of VimKylin."
     type=$(uname)
     echo "Platform type: "${type}
 
     if [ ${type} == "Darwin" ]; then
-        install_HarmonyVim_on_mac
+        install_VimKylin_on_MacOS
     elif [ ${type} == "Linux" ]; then
         tp=$(uname -a)
         if [[ $tp =~ "Android" ]]; then
             echo "Android"
-            install_HarmonyVim_on_android
+            install_VimKylin_on_Android
         else
-            install_HarmonyVim_on_linux
+            install_VimKylin_on_linux
         fi
     else
         echo "Not support platform type: "${type}
     fi
 
-	cd ${HOME}/.HarmonyVim/
+	cd ${HOME}/.VimKylin/
 	echo "The current directory path is:${PWD}"
 	echo "Create the symbolic link file in the kernel root directory."
 	ln -s ${PWD}/.ycm_extra_conf.py /home/coco-linux/linux-kernel/linux-kernel-4.1.15/
@@ -759,18 +757,18 @@ function main()
     end=`get_now_timestamp`
     second=`expr ${end} - ${begin}`
     min=`expr ${second} / 60`
-	echo "Finish installing HarmonyVim."
+	echo "Finish installing VimKylin."
     echo "It takes "${min}" minutes."
 }
 
 
-# 调用main函数
-echo -n "You will install HarmonyVim(include YouCompleteMe...) without GUI,are you sure[y/n]"
+# 调用VimKylinMain函数
+echo -n "You will install VimKylin(include YouCompleteMe...) without GUI,are you sure[y/n]"
 read  your_option
 if [ ${your_option} == "y" ]; then
-    echo "Install HarmonyVim begining..."
+    echo "Install VimKylin begining..."
     echo "Please wait for a few minutes."
-    main
+    VimKylinMain
 else
-    echo "Sorry!Stop install HarmonyVim"
+    echo "Sorry!Stop install VimKylin"
 fi
